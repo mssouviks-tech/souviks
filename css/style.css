@@ -128,7 +128,7 @@ a{
 .hero-overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.65);
+    background:rgba(0,0,0,0.78);
 }
 
 .hero-content{
@@ -142,13 +142,16 @@ a{
 
 .hero-content h1{
     font-family:'Poppins',sans-serif;
-    font-size:4rem;
+    font-size:5rem;
+    font-weight:800;
+    text-shadow:0 4px 20px rgba(0,0,0,.6);
     line-height:1.1;
     margin-bottom:20px;
 }
 
 .hero-content p{
     font-size:1.2rem;
+    max-width:1000px;
     margin-bottom:35px;
 }
 
@@ -243,18 +246,20 @@ a{
     font-size:2.5rem;
 }
 
+
 .category-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
 }
 
 .category-card{
     background:#fff;
     border-radius:12px;
     overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    transition:0.3s ease;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s ease;
+    height:100%;
 }
 
 .category-card:hover{
@@ -263,7 +268,7 @@ a{
 
 .category-card img{
     width:100%;
-    height:250px;
+    height:180px;
     object-fit:cover;
 }
 
@@ -377,6 +382,64 @@ a{
 }
 
 /* =========================
+   ABOUT HIGHLIGHT
+========================= */
+
+.about-highlight{
+    padding:120px 0;
+    background:#ffffff;
+}
+
+.about-highlight-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-highlight-image img{
+    width:100%;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.section-tag{
+    display:inline-block;
+    background:#c62828;
+    color:#fff;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:.85rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.about-highlight-content h2{
+    font-size:2.8rem;
+    line-height:1.2;
+    margin-bottom:20px;
+    font-family:'Poppins',sans-serif;
+}
+
+.about-highlight-content p{
+    margin-bottom:20px;
+    font-size:1.05rem;
+    color:#555;
+}
+
+@media(max-width:992px){
+
+    .about-highlight-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-highlight-content h2{
+        font-size:2rem;
+    }
+
+}
+
+/* =========================
    WHY SOUVIKS
 ========================= */
 
@@ -466,7 +529,7 @@ a{
 ========================= */
 
 .request-part-section{
-    background:#c62828;
+    background:#111111;
     color:#fff;
     padding:100px 0;
 }
@@ -553,14 +616,19 @@ a{
    MOBILE
 ========================= */
 
-@media(max-width:768px){
+@media(max-width:992px){
 
-    .gallery-grid{
-        grid-template-columns:1fr;
+    .category-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:20px;
+        padding-bottom:10px;
+        scroll-snap-type:x mandatory;
     }
 
-    .request-wrapper h2{
-        font-size:2rem;
+    .category-card{
+        min-width:280px;
+        scroll-snap-align:start;
     }
 
 }
