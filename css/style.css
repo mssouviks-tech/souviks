@@ -434,3 +434,133 @@ a{
     border-radius:30px;
     font-weight:600;
 }
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    padding:100px 0;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+.gallery-large img,
+.gallery-small img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.gallery-small{
+    display:grid;
+    gap:20px;
+}
+
+/* =========================
+   REQUEST PART
+========================= */
+
+.request-part-section{
+    background:#c62828;
+    color:#fff;
+    padding:100px 0;
+}
+
+.request-wrapper{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.request-wrapper h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.request-wrapper p{
+    margin-bottom:30px;
+}
+
+.request-wrapper form{
+    display:grid;
+    gap:15px;
+}
+
+.request-wrapper input,
+.request-wrapper textarea{
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    font-size:1rem;
+}
+
+.request-wrapper textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#111;
+    color:#fff;
+    padding:70px 0 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.footer h3,
+.footer h4{
+    margin-bottom:15px;
+}
+
+.copyright{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid #333;
+    text-align:center;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.floating-whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    background:#25D366;
+    color:#fff;
+    padding:15px 22px;
+    border-radius:50px;
+    font-weight:700;
+    z-index:9999;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .request-wrapper h2{
+        font-size:2rem;
+    }
+
+}
