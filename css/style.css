@@ -802,29 +802,6 @@ box-shadow:
 padding:80px 0;
 }
 
-.stats-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(220px,1fr));
-
-gap:30px;
-}
-
-.stat-card{
-
-padding:40px;
-
-background:#fff;
-
-border-radius:16px;
-
-text-align:center;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.08);
-}
 
 .about-cta{
 
@@ -836,3 +813,41 @@ color:#fff;
 
 text-align:center;
 }
+
+.nationwide{
+
+    padding:120px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f8f8f8 0%,
+        #ffffff 100%
+    );
+
+    text-align:center;
+}
+    .nationwide h2{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    color:#111;
+
+    font-weight:700;
+}
+    .nationwide p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:#666;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+}
+
+    
