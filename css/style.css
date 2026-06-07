@@ -758,3 +758,75 @@ a{
     }
 
 }
+
+    .page-hero{
+
+padding:140px 0 80px;
+
+background:#111;
+
+color:#fff;
+
+text-align:center;
+}
+
+.two-column{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+}
+
+.about-story img{
+
+width:100%;
+
+border-radius:16px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.15);
+}
+
+.about-stats{
+
+padding:80px 0;
+}
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+}
+
+.stat-card{
+
+padding:40px;
+
+background:#fff;
+
+border-radius:16px;
+
+text-align:center;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+}
+
+.about-cta{
+
+padding:100px 0;
+
+background:#111;
+
+color:#fff;
+
+text-align:center;
+}
