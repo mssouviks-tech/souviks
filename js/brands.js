@@ -17,3 +17,28 @@ tabs.forEach(tab => {
     });
 
 });
+
+const search = document.getElementById('brandSearch');
+
+if(search){
+
+search.addEventListener('keyup', ()=>{
+
+const term = search.value.toLowerCase();
+
+document.querySelectorAll('.brand-card')
+.forEach(card=>{
+
+const brand =
+card.dataset.brand.toLowerCase();
+
+card.style.display =
+brand.includes(term)
+? 'flex'
+: 'none';
+
+});
+
+});
+
+}
