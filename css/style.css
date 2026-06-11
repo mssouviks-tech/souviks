@@ -658,10 +658,11 @@ a{
 
 .brand-tab img{
 
-    width:42px;
-    height:42px;
-    object-fit:cover;
+   width:28px;
+    height:28px;
+    object-fit:contain;
     border-radius:10px;
+   opacity:.8
 }
 
 .brand-tab:hover{
@@ -752,6 +753,9 @@ a{
     opacity:.75;
 
     transition:.35s ease;
+}
+    .brand-tab.active img{
+    filter:none;
 }
 .brand-card:hover img{
 
