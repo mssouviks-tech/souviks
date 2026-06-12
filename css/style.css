@@ -1193,3 +1193,29 @@ text-align:center;
     }
 
 }
+@media (max-width:768px){
+
+    .brand-tabs{
+
+        flex-wrap:nowrap;
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+
+        padding-bottom:10px;
+
+        scroll-snap-type:x proximity;
+    }
+
+    .brand-tabs::-webkit-scrollbar{
+
+        display:none;
+    }
+
+    .brand-tab{
+
+        flex-shrink:0;
+    }
+
+}
