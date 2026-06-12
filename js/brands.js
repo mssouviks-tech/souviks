@@ -1,18 +1,67 @@
 const tabs = document.querySelectorAll('.brand-tab');
 const panels = document.querySelectorAll('.brand-panel');
+const placeholder = document.querySelector('.brand-placeholder');
+
+const categoryOrder = [
+    'oem',
+    'bearings',
+    'lubricants',
+    'filters',
+    'brakes',
+    'electrical',
+    'suspension',
+    'transmission'
+];
+
+let currentCategoryIndex = -1;
+
+const categoryLabel =
+document.getElementById('currentCategoryLabel');
+
+const prevButton =
+document.getElementById('prevCategory');
+
+const nextButton =
+document.getElementById('nextCategory');
+
+function activateCategory(index){
+
+    tabs.forEach(tab =>
+        tab.classList.remove('active')
+    );
+
+    panels.forEach(panel =>
+        panel.classList.remove('active')
+    );
+
+    currentCategoryIndex = index;
+
+    tabs[index].classList.add('active');
+
+    document
+        .getElementById(
+            categoryOrder[index]
+        )
+        .classList.add('active');
+
+    if(placeholder){
+
+        placeholder.classList.add('hidden');
+    }
+
+    categoryLabel.textContent =
+        tabs[index].innerText
+        .replace(/\d+/g,'')
+        .trim();
+}
 
 tabs.forEach(tab => {
 
     tab.addEventListener('click', () => {
 
-        tabs.forEach(t => t.classList.remove('active'));
-        panels.forEach(p => p.classList.remove('active'));
-
-        tab.classList.add('active');
-
-        document
-            .getElementById(tab.dataset.category)
-            .classList.add('active');
+        activateCategory(
+            [...tabs].indexOf(tab)
+        );
 
     });
 
@@ -41,4 +90,59 @@ brand.includes(term)
 
 });
 
+}
+if(prevButton){
+
+    prevButton.addEventListener(
+        'click',
+        ()=>{
+
+            if(currentCategoryIndex < 0){
+
+                currentCategoryIndex = 0;
+            }
+
+            currentCategoryIndex--;
+
+            if(currentCategoryIndex < 0){
+
+                currentCategoryIndex =
+                categoryOrder.length - 1;
+            }
+
+            activateCategory(
+                currentCategoryIndex
+            );
+
+        }
+    );
+}
+
+if(nextButton){
+
+    nextButton.addEventListener(
+        'click',
+        ()=>{
+
+            if(currentCategoryIndex < 0){
+
+                currentCategoryIndex = 0;
+            }
+
+            currentCategoryIndex++;
+
+            if(
+                currentCategoryIndex >=
+                categoryOrder.length
+            ){
+
+                currentCategoryIndex = 0;
+            }
+
+            activateCategory(
+                currentCategoryIndex
+            );
+
+        }
+    );
 }
