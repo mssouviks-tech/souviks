@@ -658,9 +658,11 @@ a{
 
 .brand-tab img{
 
-   width:28px;
-    height:28px;
+     width:42px;
+    height:42px;
+
     object-fit:contain;
+    display:block;
     border-radius:10px;
    opacity:.8
 }
@@ -760,7 +762,10 @@ a{
 .brand-card:hover img{
 
     filter:none;
-    opacity:1;
+   
+    transform:scale(1.1);
+    transition:.3s ease; 
+   opacity:1;
 }
     .brand-grid{
 
@@ -1139,3 +1144,52 @@ text-align:center;
     display:inline-block;
 }
     
+
+
+@media (max-width: 768px){
+
+    .brand-grid{
+
+        display:flex;
+
+        overflow-x:auto;
+
+        gap:16px;
+
+        padding-bottom:10px;
+
+        scroll-snap-type:x mandatory;
+
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .brand-grid::-webkit-scrollbar{
+
+        display:none;
+    }
+
+    .brand-card{
+
+        flex:0 0 180px;
+
+        min-width:180px;
+
+        height:130px;
+
+        scroll-snap-align:start;
+    }
+
+}
+    @media (max-width:768px){
+
+    .brand-panel{
+
+        padding-top:20px;
+    }
+
+    .brand-card:hover{
+
+        transform:none;
+    }
+
+}
