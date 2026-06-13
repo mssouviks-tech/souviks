@@ -12,9 +12,7 @@ const categoryOrder = [
     'suspension',
     'transmission'
 ];
-
-let currentCategoryIndex = -1;
-
+let currentCategoryIndex = 0;
 const categoryLabel =
 document.getElementById('currentCategoryLabel');
 
@@ -49,10 +47,13 @@ function activateCategory(index){
         placeholder.classList.add('hidden');
     }
 
+if(categoryLabel){
+
     categoryLabel.textContent =
         tabs[index].innerText
         .replace(/\d+/g,'')
         .trim();
+
 }
 
 tabs.forEach(tab => {
@@ -83,7 +84,7 @@ card.dataset.brand.toLowerCase();
 
 card.style.display =
 brand.includes(term)
-? 'flex'
+? ''
 : 'none';
 
 });
