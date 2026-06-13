@@ -726,6 +726,7 @@ a{
     0 10px 25px rgba(0,0,0,.08);
 
     transition:.35s ease;
+   
 }
 
 .brand-card:hover{
@@ -1170,11 +1171,11 @@ text-align:center;
 
     .brand-card{
 
-        flex:0 0 180px;
+        flex:0 0 150px;
 
-        min-width:180px;
+    min-width:150px;
 
-        height:130px;
+    height:120px;
 
         scroll-snap-align:start;
     }
