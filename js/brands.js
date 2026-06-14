@@ -55,6 +55,7 @@ if(categoryLabel){
         .trim();
 
 }
+}
 
 tabs.forEach(tab => {
 
