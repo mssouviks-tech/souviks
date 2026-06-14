@@ -268,9 +268,14 @@ a{
     font-size:2.5rem;
 }
 
-.specialties-{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
+.specialties-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
     gap:20px;
 }
 
