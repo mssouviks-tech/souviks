@@ -199,7 +199,25 @@ a{
     grid-template-columns:repeat(4,1fr);
     gap:25px;
 }
+.trust-metrics .metrics-grid{
 
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+.trust-metrics .metric{
+
+    width:260px;
+
+    max-width:100%;
+
+    text-align:center;
+}
+.trust-metrics .section-heading{
+
+    text-align:center;
+}
 .metric{
 
     background:#fff;
