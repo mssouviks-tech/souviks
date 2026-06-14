@@ -1298,3 +1298,29 @@ text-align:center;
         display:none;
     }
 }    
+/*====== Request Part================*/
+
+.request-wrapper select{
+
+    padding:15px;
+
+    border:1px solid #333;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+    width:100%;
+}
+
+.request-wrapper form{
+
+    display:grid;
+
+    gap:16px;
+}
+
+.request-wrapper{
+
+    max-width:800px;
+}
