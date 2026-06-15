@@ -52,11 +52,24 @@
     display:grid;
 
     grid-template-columns:
-    280px 1fr;
+    280px minmax(0,1fr);
 
     gap:40px;
-}
 
+    align-items:start;
+}
+.catalogue-content{
+    min-width:0;
+    display:block;
+
+    width:100%;
+}
+.catalogue-section .container{
+
+    max-width:1400px;
+
+    margin:auto;
+}
 
 /* =========================
    SIDEBAR
