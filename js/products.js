@@ -274,10 +274,7 @@ function renderProducts(){
                     ${product.brand}
                 </p>
 
-                <p>
-                    <strong>Part Number:</strong>
-                    ${product.partNumber}
-                </p>
+           
 
                 <a
                     href="${product.productPage}"
