@@ -434,3 +434,111 @@
         width:100%;
     }
 }
+
+/* -------------------------
+   AVAILABLE BRANDS
+------------------------- */
+
+.brand-filter-section{
+    margin:40px 0 30px;
+}
+
+.brand-list{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+
+}
+
+.brand-pill{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:12px 24px;
+
+    background:#fff;
+
+    border:1px solid #dedede;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    font-weight:600;
+
+    color:#333;
+
+    user-select:none;
+
+}
+
+.brand-pill:hover{
+
+    background:#111;
+
+    color:#fff;
+
+    border-color:#111;
+
+}
+
+.brand-pill.active{
+
+    background:#d62828;
+
+    border-color:#d62828;
+
+    color:#fff;
+
+}
+
+/* Product Counter */
+
+.catalogue-results{
+
+    margin:20px 0;
+
+    color:#666;
+
+    font-weight:500;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.brand-list{
+
+    flex-wrap:nowrap;
+
+    overflow-x:auto;
+
+    -webkit-overflow-scrolling:touch;
+
+    scrollbar-width:none;
+
+    padding-bottom:8px;
+
+}
+
+.brand-list::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.brand-pill{
+
+    flex:0 0 auto;
+
+    white-space:nowrap;
+
+}
+
+}
