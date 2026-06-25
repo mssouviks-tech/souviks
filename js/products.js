@@ -12,8 +12,8 @@ document.getElementById('categoryList');
 const featuredCategories =
 document.getElementById('featuredCategories');
 
-const brandFilter =
-document.getElementById('brandFilter');
+const brandList =
+document.getElementById('brandList');
 
 const searchInput =
 document.getElementById('searchInput');
@@ -49,21 +49,15 @@ async function loadProducts(){
 
 function initializeFilters(){
 
-    createBrandDropdown();
-
     createCategories();
+
+    createBrandCards();
 
     attachEvents();
 
 }
 
-function createBrandDropdown(){
 
-    const brands =
-    [...new Set(
-        allProducts.map(
-            product => product.brand
-        )
     )].sort();
 
     brands.forEach(brand => {
@@ -156,18 +150,6 @@ function createCategories(){
 }
 
 function attachEvents(){
-
-    brandFilter.addEventListener(
-        'change',
-        () => {
-
-            selectedBrand =
-            brandFilter.value;
-
-            renderProducts();
-
-        }
-    );
 
     searchInput.addEventListener(
         'input',
@@ -342,15 +324,11 @@ function readUrlParameters(){
 
     }
 
-    if(brand){
+  if(brand){
 
-        selectedBrand =
-        brand;
+    selectedBrand = brand;
 
-        brandFilter.value =
-        brand;
-
-    }
+}
 
 }
 
