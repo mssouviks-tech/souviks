@@ -6,10 +6,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Products Catalogue | Souviks</title>
+<title>Products | Souviks</title>
 
 <meta name="description"
-content="Browse genuine and aftermarket automobile spare parts by category, brand and application.">
+content="Browse genuine and aftermarket automobile spare parts from leading brands. Search by category, part number, vehicle application or manufacturer. Nationwide shipping across India.">
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/products.css">
@@ -53,14 +53,13 @@ content="Browse genuine and aftermarket automobile spare parts by category, bran
     <div class="container">
 
         <h1>
-            Automobile Spare Parts Catalogue
-        </h1>
+    Automobile Spare Parts
+</h1>
 
-        <p>
-            Browse products by category,
-            brand or part number.
-        </p>
-
+<p>
+    Find genuine and aftermarket spare parts by part number,
+    brand, category or vehicle application.
+</p>
     </div>
 
 </section>
@@ -108,23 +107,37 @@ content="Browse genuine and aftermarket automobile spare parts by category, bran
 
                 <!-- FILTERS -->
 
-                <div class="catalogue-filters">
+             <div class="catalogue-filters">
 
-                    <select id="brandFilter">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by Part Number, Product or Brand">
 
-                        <option value="">
-                            All Brands
-                        </option>
+</div>
 
-                    </select>
+<!-- AVAILABLE BRANDS -->
 
-                    <input
-                        type="text"
-                        id="searchInput"
-                        placeholder="Search products..."
-                    >
+<div class="brand-filter-section">
 
-                </div>
+    <h2 class="section-title">
+        Available Brands
+    </h2>
+
+    <div id="brandList"
+         class="brand-list">
+
+    </div>
+
+</div>
+
+<div class="catalogue-results">
+
+    Showing
+    <span id="productCount">0</span>
+    Products
+
+</div>
 
                 <!-- PRODUCT GRID -->
 
@@ -152,8 +165,8 @@ content="Browse genuine and aftermarket automobile spare parts by category, bran
         </h2>
 
         <p>
-            Contact our team and we'll help
-            identify the right component.
+          Tell us your vehicle model or part number
+and our team will help identify the correct replacement part.
         </p>
 
         <div class="hero-buttons">
@@ -206,15 +219,18 @@ content="Browse genuine and aftermarket automobile spare parts by category, bran
 
             </div>
 
-            <div>
+           <div>
 
-                <h4>Quick Links</h4>
+    <h4>Quick Links</h4>
 
-                <p><a href="index.html">Home</a></p>
-                <p><a href="brands.html">Brands</a></p>
-                <p><a href="contact.html">Contact</a></p>
+    <p><a href="index.html">Home</a></p>
+    <p><a href="products.html">Products</a></p>
+    <p><a href="brands.html">Brands</a></p>
+    <p><a href="about.html">About Us</a></p>
+    <p><a href="contact.html">Contact</a></p>
+    <p><a href="request-part.html">Request a Part</a></p>
 
-            </div>
+</div>
 
         </div>
 
