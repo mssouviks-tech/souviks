@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS products (
   id TEXT PRIMARY KEY, name TEXT NOT NULL, brand TEXT, brand_logo TEXT, category TEXT, subcategory TEXT,
-  part_number TEXT, image TEXT, product_page TEXT, description TEXT, applications TEXT, vehicles TEXT,
-  mrp REAL, selling_price REAL, cost_price REAL,
+  part_number TEXT, manufacturer_part_number TEXT, image TEXT, product_page TEXT, description TEXT, applications TEXT, vehicles TEXT,
+  mrp REAL, selling_price REAL, cost_price REAL, landed_cost_ex_gst REAL, gst_rate REAL NOT NULL DEFAULT 0.18,
   stock_on_hand INTEGER NOT NULL DEFAULT 0, stock_reserved INTEGER NOT NULL DEFAULT 0,
   stock_available INTEGER NOT NULL DEFAULT 0, stock_incoming INTEGER NOT NULL DEFAULT 0,
   order_asap INTEGER NOT NULL DEFAULT 0, reorder_level INTEGER NOT NULL DEFAULT 0,
