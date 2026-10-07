@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/styles.css">
+<title>Souviks Internal</title></head>
+<body><main class="app">
+<header class="topbar"><div><div class="eyebrow">SOUVIKS</div><h1>Internal</h1></div><button class="icon-button" id="refreshBtn" aria-label="Refresh">↻</button></header>
+<section class="search-wrap"><input id="search" type="search" placeholder="Search product, part number, brand..." autocomplete="off"></section>
+
+<section id="home" class="screen active"><div class="home-grid">
+<button class="home-card catalogue" data-action="catalogue"><span class="home-icon">▦</span><span class="home-title">Catalogue</span><span class="home-meta" id="catalogueCount">— products</span></button>
+<button class="home-card reorder" data-action="reorder"><span class="home-icon">↻</span><span class="home-title">Re-order</span><span class="home-meta" id="reorderCount">— items</span></button>
+<button class="home-card sale" data-action="sale"><span class="home-icon">−</span><span class="home-title">Sale Out</span><span class="home-meta">Reduce stock for a sale</span></button>
+</div></section>
+
+<section id="catalogue" class="screen"><div class="section-head"><button class="back" data-action="home">← Home</button><div class="view-switch"><button class="view active" data-view="cards">▦ Cards</button><button class="view" data-view="list">≡ List</button></div></div>
+<div class="filters"><select id="brandFilter"><option value="">All brands</option></select><select id="categoryFilter"><option value="">All categories</option></select></div><div id="products" class="product-grid"></div></section>
+
+<section id="reorder" class="screen"><div class="section-head"><button class="back" data-action="home">← Home</button><h2>Re-order</h2></div><p class="muted">Products explicitly marked for replenishment.</p><div id="reorderProducts" class="product-list"></div></section>
+
+<section id="sale" class="screen"><div class="section-head"><button class="back" data-action="home">← Home</button><h2>Sale Out</h2></div>
+<div class="sale-panel"><label>Search product</label><input id="saleSearch" type="search" placeholder="Part number, product or brand"><div id="saleResults"></div></div></section>
+</main><script src="/app.js"></script></body></html>
