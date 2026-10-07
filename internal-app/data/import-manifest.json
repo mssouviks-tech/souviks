@@ -1,0 +1,10 @@
+{
+  "source_files": ["products.xlsx", "stock.xlsx"],
+  "matched_stock_rows": 686,
+  "unique_products": 639,
+  "unmatched_stock_rows": 221,
+  "gst_rate": 0.18,
+  "cost_price_rule": "cost_price = landed_cost_ex_gst * 1.18",
+  "cost_price_is": "final landed cost including GST",
+  "unmatched_policy": "Do not import unmatched stock rows until manually resolved"
+}
